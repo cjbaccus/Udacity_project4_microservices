@@ -9,15 +9,22 @@ dockerpath="cjbaccus/udacity_microservices"
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run mlsmicrosvc\
-    --generator=run-pod/v1\
-    --image=$dockerpath\
-    --port=8080 --labels app=udacitymlsmicrosvc
+kubectl create deployment mymicroservicebuild --image=docker.io/${dockerpath}:latest --port=80
+
+#kubectl run mlsmicrosvc\
+#    --generator=run-pod/v1\
+#    --image=$dockerpath\
+#    --port=8080 --labels app=udacitymlsmicrosvc
 
 # Step 3:
 # List kubernetes pods
-kubectl get pods --all-namespaces
+kubectl get pods
+
 
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward mlsmicrosvc 8080:8080
+#kubectl port-forward mymicroservicebuild 8080:8080
+
+
+POD_NAME=`kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}'`
+kubectl port-forward $POD_NAME 8000:80
