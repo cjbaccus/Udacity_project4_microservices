@@ -1,4 +1,4 @@
-[![cjbaccus](https://circleci.com/gh/cjbaccus/Udacity_project4_microservices.svg?style=svg)](https://circleci.com/gh/cjbaccus/Udacity_project4_microservices)
+[![cjbaccus](https://circleci.com/gh/cjbaccus/Udacity_project4_microservices.svg?style=shield)](https://circleci.com/gh/cjbaccus/Udacity_project4_microservices)
 
 ## Project Overview
 
