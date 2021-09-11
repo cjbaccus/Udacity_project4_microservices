@@ -26,8 +26,8 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ## Setting up and configuring the Environment
 
 * Create python virtualenv and activate:
- * python -m venv ~/.devops
- * source ~/.devops/bin/activate
+  * python -m venv ~/.devops
+  * source ~/.devops/bin/activate
 * Run ``` make install ``` to install required dependancies
 
 ### Executing the  `app.py` 
@@ -39,9 +39,9 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
- * This will differ depending on your host OS, this project was build using AWS Cloud9 environment, and it was pre-installed.
+  * This will differ depending on your host OS, this project was build using AWS Cloud9 environment, and it was pre-installed.
 * Setup and Configure Kubernetes locally
- * Once again depending on OS, I installed minikube and used it for my kubernetes environment.
+  * Once again depending on OS, I installed minikube and used it for my kubernetes environment.
 * Create Flask app in Container
 * Run via kubectl
 
