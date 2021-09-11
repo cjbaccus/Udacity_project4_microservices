@@ -23,12 +23,14 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ---
 
-## Setup the Environment
+## Setting up and configuring the Environment
 
-* Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
+* Create python virtualenv and activate:
+ * python -m venv ~/.devops
+ * source ~/.devops/bin/activate
+* Run ``` make install ``` to install required dependancies
 
-### Running `app.py`
+### Executing the  `app.py` 
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
@@ -37,6 +39,32 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
+ * This will differ depending on your host OS, this project was build using AWS Cloud9 environment, and it was pre-installed.
 * Setup and Configure Kubernetes locally
+ * Once again depending on OS, I installed minikube and used it for my kubernetes environment.
 * Create Flask app in Container
 * Run via kubectl
+
+## File structure
+
+`output of tree -a (excluding git directory)`:
+```
+├── .circleci
+│   └── config.yml
+|── Dockerfile
+├── Makefile
+├── README.md
+├── app.py
+├── hadolint
+├── make_prediction.sh
+├── model_data
+│   ├── boston_housing_prediction.joblib
+│   └── housing.csv
+├── output_txt_files
+│   ├── docker_out.txt
+│   └── kubernetes_out.txt
+├── requirements.txt
+├── run_docker.sh
+├── run_kubernetes.sh
+└── upload_docker.sh
+```
