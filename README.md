@@ -29,6 +29,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
   * python -m venv ~/.devops
   * source ~/.devops/bin/activate
 * Run ``` make install ``` to install required dependancies
+* When all is complete, Run `make lint` to validate that the code and the Dockerfile are well-formed, and don't contain errors.
 
 ### Executing the  `app.py` 
 
