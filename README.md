@@ -51,22 +51,22 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 `output of tree -a (excluding git directory)`:
 ```
-├── .circleci
-│   └── config.yml
-|── Dockerfile
-├── Makefile
-├── README.md
-├── app.py
-├── hadolint
-├── make_prediction.sh
-├── model_data
-│   ├── boston_housing_prediction.joblib
-│   └── housing.csv
-├── output_txt_files
-│   ├── docker_out.txt
-│   └── kubernetes_out.txt
-├── requirements.txt
-├── run_docker.sh
-├── run_kubernetes.sh
-└── upload_docker.sh
+├── .circleci ~ folder
+│   └── config.yml ~ configuration file for circleci to execute CICD pipeline
+|── Dockerfile ~ Dockerfile to build container with application and dependancies
+├── Makefile ~ File allowing execution of 'make' commands to setup,install,lint,etc.
+├── README.md ~ This file you are reading now
+├── app.py ~ This is the ML / Flask application that will perform predictions when fed specific data
+├── hadolint ~ This is the executable file for linting of Dockerfile
+├── make_prediction.sh ~ Bash script for calling prediction and simulates sample data
+├── model_data ~ folder
+│   ├── boston_housing_prediction.joblib ~ included data files for prediction
+│   └── housing.csv ~ included data files for prediction
+├── output_txt_files ~ folder
+│   ├── docker_out.txt ~ output from running "run_docker.sh" AND "make_prediction.sh" in another terminal
+│   └── kubernetes_out.txt ~ output from running "run_kubernetes.sh" AND "make_prediction.sh" in another terminal
+├── requirements.txt ~ All of the required python libraries (and version numbers) required to make the app.py work
+├── run_docker.sh ~ Bash script to spin up a docker container and execute the app.py ready to receive input from "make_prediction.sh"
+├── run_kubernetes.sh ~ Bash script to spin up kuberenetes and then a docker container that runs app.py also ready for input from "make_prediction.sh"
+└── upload_docker.sh ~ Bash script to upload the docker image to personal Docker.io / dockerhub repository.  This allows it to be pulled down with "run_kubernetes.sh" later.
 ```
