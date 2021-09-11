@@ -43,6 +43,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
   * Once again depending on OS, I installed minikube and used it for my kubernetes environment.
 * Create Flask app in Container
+  * Run `./run_docker.sh` and then test in a new terminal window with `./make_prediction`
 * Run via kubectl
 
 ## File structure
