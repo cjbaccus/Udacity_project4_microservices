@@ -1,1 +1,18 @@
-<paste log output from Kubernetes-mediated prediction, here>
+ubuntu:~/environment/Udacity_project4_microservices (main) $ ./run_kubernetes.sh 
+deployment.apps/mymicroservicebuild created
+sleeping for 60 seconds, while docker spins up...
+NAME                                   READY   STATUS    RESTARTS   AGE
+mymicroservicebuild-65d4bfccbf-htsx8   1/1     Running   0          60s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+
+<new shell>
+ubuntu:~/environment/Udacity_project4_microservices (main) $ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+ubuntu:~/environment/Udacity_project4_microservices (main) $ 
+

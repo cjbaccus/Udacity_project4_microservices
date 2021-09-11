@@ -10,6 +10,8 @@ dockerpath="cjbaccus/udacity_microservices"
 # Step 2
 # Run the Docker Hub container with kubernetes
 kubectl create deployment mymicroservicebuild --image=docker.io/${dockerpath}:latest --port=80
+echo "sleeping for 60 seconds, while docker spins up..."
+sleep 60
 
 #kubectl run mlsmicrosvc\
 #    --generator=run-pod/v1\
